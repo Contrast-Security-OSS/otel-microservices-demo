@@ -17,8 +17,13 @@ jobs:
     # Only run this job if the PR is opened by dependabot and the last commit is from dependabot
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@a5ad31d6a139d249332a2605b85202e8c0b78450 # v2.19.1
+        with:
+          egress-policy: audit
+
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@93cb6efe18208431cddfb8368fd83d5badbf9bfd # v5.0.1
         with:
           ref: ${{ github.head_ref }}
           token: ${{ secrets.DEPENDABOT_TOKEN }}
