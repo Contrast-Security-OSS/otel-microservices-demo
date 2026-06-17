@@ -20,7 +20,7 @@
     "@opentelemetry/auto-instrumentations-node": "0.75.0",
     "@opentelemetry/auto-instrumentations-web": "0.62.0",
     "@opentelemetry/context-zone": "2.7.1",
-    "@opentelemetry/core": "2.7.1",
+    "@opentelemetry/core": "2.8.0",
     "@opentelemetry/exporter-metrics-otlp-grpc": "0.217.0",
     "@opentelemetry/exporter-trace-otlp-grpc": "0.217.0",
     "@opentelemetry/exporter-trace-otlp-http": "0.217.0",
